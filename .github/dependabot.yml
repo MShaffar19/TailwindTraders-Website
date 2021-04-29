@@ -1,0 +1,60 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/Source/Tailwind.Traders.Web/ClientApp"
+  schedule:
+    interval: daily
+    time: "21:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: msal
+    versions:
+    - 1.4.6
+    - 1.4.8
+    - 1.4.9
+  - dependency-name: "@microsoft/applicationinsights-react-js"
+    versions:
+    - 3.0.5
+  - dependency-name: react-scripts
+    versions:
+    - 4.0.2
+- package-ecosystem: nuget
+  directory: "/Source/Tailwind.Traders.Web"
+  schedule:
+    interval: daily
+    time: "21:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: CsvHelper
+    versions:
+    - 22.1.2
+    - 23.0.0
+    - 24.0.0
+    - 24.0.1
+    - 25.0.0
+    - 26.0.1
+    - 26.1.0
+    - 27.0.0
+    - 27.0.1
+  - dependency-name: Azure.Storage.Blobs
+    versions:
+    - 12.8.1
+  - dependency-name: MongoDB.Driver
+    versions:
+    - 2.12.0
+    - 2.12.1
+  - dependency-name: Microsoft.AspNetCore.SpaServices.Extensions
+    versions:
+    - 5.0.3
+    - 5.0.4
+  - dependency-name: Microsoft.AspNetCore.Authentication.JwtBearer
+    versions:
+    - 5.0.3
+    - 5.0.4
+  - dependency-name: Microsoft.AspNetCore.HeaderPropagation
+    versions:
+    - 5.0.3
+    - 5.0.4
+  - dependency-name: SixLabors.ImageSharp
+    versions:
+    - 1.0.2
